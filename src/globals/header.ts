@@ -1,3 +1,4 @@
+import link from "@/fields/link";
 import { GlobalConfig } from "payload";
 
 export const Header: GlobalConfig = {
@@ -11,10 +12,7 @@ export const Header: GlobalConfig = {
             name: 'navigations',
             type: 'array',
             fields: [
-                {
-                    name: 'navigation',
-                    type: 'text'
-                }
+                link
             ]
         }
     ]
