@@ -8,9 +8,8 @@ import { formatDateFromISO } from '@/utils/formatdate'
 import { Prose } from '@/components/Prose'
 
 type Props = {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
+
 }
 
 const post = async ({ params }: Props) => {
