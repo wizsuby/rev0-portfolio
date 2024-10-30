@@ -12,6 +12,7 @@ import { Pages } from './collections/Pages'
 import { Header } from './globals/header'
 import { Posts } from './collections/Posts'
 import { Footer } from './globals/footer'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 
 
 const filename = fileURLToPath(import.meta.url)
@@ -31,10 +32,11 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  db: sqliteAdapter({
-    client: {
-      url: process.env.DATABASE_URI || '',
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.DATABASE_URI || '',
     },
+    push: false
   }),
   sharp,
   plugins: [

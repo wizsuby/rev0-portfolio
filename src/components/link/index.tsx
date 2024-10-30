@@ -11,7 +11,6 @@ type Props = {
 }
 
 const CMSLink = ({ link,className }: Props) => {
- 
   switch (link.type) {
     case 'social':
       return <SocialLink link={link} />
