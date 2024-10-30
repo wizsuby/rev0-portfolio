@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --bg-color: #fff;
+        --text-color: #000;
+        --border: #dddddd;
+        --secondary: #7e7e7e;
+        --hover: #ececec;
+    }
+
+    .dark{
+        --bg-color: #181818;
+        --text-color: #fff;
+        --border:#272727;
+        --secondary: #7e7e7e;
+        --hover: #2e2e2e;
+    }
+}

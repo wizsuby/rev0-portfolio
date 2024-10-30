@@ -15,7 +15,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
   const title = header?.title
 
   return (
-    <header className="max-w-screen-sm  mx-auto pl-5 py-3 pr-4 flex justify-between items-center font-mono">
+    <header className="max-w-screen-sm w-full  mx-auto pl-5 py-3 pr-4 flex justify-between items-center font-mono">
       <Link className="font-bold text-xl" href="/">
         {title}
       </Link>

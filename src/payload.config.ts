@@ -10,6 +10,8 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Header } from './globals/header'
+import { Posts } from './collections/Posts'
+import { Footer } from './globals/footer'
 
 
 const filename = fileURLToPath(import.meta.url)
@@ -22,8 +24,8 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Pages],
-  globals: [Header],
+  collections: [Users, Media, Pages, Posts],
+  globals: [Header, Footer],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

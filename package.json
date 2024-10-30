@@ -20,6 +20,9 @@
     "@payloadcms/next": "beta",
     "@payloadcms/plugin-cloud": "beta",
     "@payloadcms/richtext-lexical": "beta",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "class-variance-authority": "^0.7.0",
     "cross-env": "^7.0.3",
     "graphql": "^16.9.0",
     "lucide-react": "^0.453.0",
@@ -27,7 +30,8 @@
     "payload": "beta",
     "react": "^19.0.0-rc-cae764ce-20241025",
     "react-dom": "^19.0.0-rc-cae764ce-20241025",
-    "sharp": "0.32.6"
+    "sharp": "0.32.6",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@types/node": "^22.8.1",

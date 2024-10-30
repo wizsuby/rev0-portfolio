@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload'
 
 export const Media: CollectionConfig = {
-  slug: 'Media',
+  slug: 'media',
   upload: {
     staticDir: 'media',
     imageSizes: [

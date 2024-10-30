@@ -9,7 +9,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        text: 'var(--text-color)',
+        border: 'var(--border)',
+        background: 'var(--bg-color)',
+        secondary: 'var(--secondary)',
+        hover: 'var(--hover)',
+      }
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

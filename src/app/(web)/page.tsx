@@ -1,11 +1,4 @@
-import React from 'react'
+import pageTemplate from './[slug]/page'
 
-type Props = {}
 
-const page = (props: Props) => {
-  return (
-    <div>page</div>
-  )
-}
-
-export default page
+export default pageTemplate

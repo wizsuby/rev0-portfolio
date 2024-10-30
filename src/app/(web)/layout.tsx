@@ -2,8 +2,9 @@ import { Inter } from 'next/font/google'
 // import Navbar from './_components'
 import './global.css'
 import Header from '@/Header/Component'
+import Footer from '@/footer/Component'
 
-const inter = Inter({ subsets: ['latin-ext'] })
+const inter = Inter({ subsets: ['latin-ext', 'latin'] })
 
 export const metadata = {
   title: 'Next.js',
@@ -14,8 +15,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
+        <div className='flex min-h-screen flex-col'>
+          <Header />
+          <div className='flex-1'>
+          {children}
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   )

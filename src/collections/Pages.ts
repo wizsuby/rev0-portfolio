@@ -1,3 +1,7 @@
+import { Content } from "@/blocks/content-block/config";
+import { PostList } from "@/blocks/PostList/config";
+import { SocialMediaLinks } from "@/blocks/socialIcons/config";
+import { TopSection } from "@/blocks/TopSection/config";
 import { CollectionConfig } from "payload";
 
 export const Pages: CollectionConfig = {
@@ -37,7 +41,7 @@ export const Pages: CollectionConfig = {
         {
             name: 'layout',
             type: 'blocks',
-            blocks: []
+            blocks: [PostList, SocialMediaLinks, TopSection, Content]
         }
     ]
 }
