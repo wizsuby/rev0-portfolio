@@ -5,28 +5,31 @@ import { Page as PageType } from '@/payload-types'
 import { notFound } from 'next/navigation'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 
-export async function generateStaticParams() {
-  const payload = await getPayloadHMR({ config: configPromise })
-  const pages = await payload.find({
-    collection: 'pages',
-    draft: false,
-    limit: 1000,
-  })
+// export async function generateStaticParams() {
+//   const payload = await getPayloadHMR({ config: configPromise })
+//   const pages = await payload.find({
+//     collection: 'pages',
+//     draft: false,
+//     limit: 1000,
+//   })
 
-  return pages.docs
-    ?.filter((doc) => {
-      return doc.slug !== 'home'
-    })
-    .map(({ slug }) => slug)
-}
+//   return pages.docs
+//     ?.filter((doc) => {
+//       return doc.slug !== 'home'
+//     })
+//     .map(({ slug }) => slug)
+// }
 
-const pageTemplate = async ({ params }: { params: { slug: string } }) => {
+type Params = Promise<{ slug: string }>
+
+const pageTemplate = async ({ params }: { params: Params }) => {
   let page: PageType | null
+  // const {slug} = await params
   let slug = 'home'
   const parameter = await params
   if (parameter.slug) slug = parameter.slug
   page = await queryPageBySlug({
-    slug: slug,
+    slug,
   })
 
   if (!page) return notFound()
